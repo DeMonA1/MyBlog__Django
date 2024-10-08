@@ -22,4 +22,6 @@ source my_env/bin/activate
 
     TO execute migration:
     python3 manage.py makemigrations [blog]
-    
+
+    To create superuser:
+    python3 manage.py createsuperuser
