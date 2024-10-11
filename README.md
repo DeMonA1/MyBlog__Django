@@ -31,4 +31,8 @@ source my_env/bin/activate
 
     To create superuser:
     python3 manage.py createsuperuser
-    
+
+You have to create .env file with:
+EMAIL_HOST_USER=<example@gmail.com>
+EMAIL_HOST_PASSWORD=from google apppasswords
+DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
