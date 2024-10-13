@@ -54,7 +54,16 @@ source my_env/bin/activate
         >>>from django.contrib.contenttypes.models import ContentType
         >>>ContentType.objects.all().delete()
 
-You have to create .env file with:
+
+
+        In order to add postgresql ext for example like triagram, you have to:
+
+        python manage.py makemigrations --name=trigram_ext --empty blog
+
+        Next, you edit the migrations file adding into it operations field:
+            TriagramExtension()
+
+You have to create .env file with:  
 EMAIL_HOST_USER=<example@gmail.com>
 EMAIL_HOST_PASSWORD=from google apppasswords
 DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
