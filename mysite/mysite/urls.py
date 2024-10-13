@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
-from blog.sitemaps import PostSitemap
+from blog.sitemaps import PostSitemap, SlugSitemap
 
 
-sitemaps = {'posts': PostSitemap}
+sitemaps = {'posts': PostSitemap, 'slug': SlugSitemap}
 
 
 urlpatterns = [
