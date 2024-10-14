@@ -63,6 +63,9 @@ source my_env/bin/activate
         Next, you edit the migrations file adding into it operations field:
             TriagramExtension()
 
+    To send share-letter not using email, use 
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' into settings.
+    
 You have to create .env file with:  
 EMAIL_HOST_USER=<example@gmail.com>
 EMAIL_HOST_PASSWORD=from google apppasswords
