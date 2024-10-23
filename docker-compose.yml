@@ -1,0 +1,37 @@
+services:
+  web:
+    build: .
+    environment:
+      EMAIL_HOST_USER: "example@gmail.com"
+      EMAIL_HOST_PASSWORD: "from google apppasswords"
+      DEFAULT_FROM_EMAIL: "My Blog example@gmail.com"
+      DB_HOST: "db"
+      DB_NAME: "blog"
+      DB_USER: "postgres"
+      DB_PASSWORD: "postgres"
+    volumes:
+      - .:/code
+  web_migrate:
+    extends:
+      service: web
+    command:  sh -c "sleep 15 && python /code/mysite/manage.py migrate"
+    depends_on:
+      - db
+  web_run:
+    extends:
+        service: web
+    command:  sh -c "sleep 15 && python /code/mysite/manage.py runserver 0.0.0.0:8000"
+    ports:
+        - "8000:8000"
+    depends_on:
+      - db
+      - web_migrate
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=blog
+      - POSTGRES_USER=postgres

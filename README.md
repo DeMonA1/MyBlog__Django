@@ -70,3 +70,9 @@ You have to create .env file with:
 EMAIL_HOST_USER=<example@gmail.com>
 EMAIL_HOST_PASSWORD=from google apppasswords
 DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
+
+To run the Blog app you should:
+    docker compose up
+
+If you wanna run it without container, first of all you should
+run the PostgresQL image as it hase described upper.
