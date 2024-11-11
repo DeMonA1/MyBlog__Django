@@ -2,13 +2,13 @@ services:
   web:
     build: .
     environment:
-      EMAIL_HOST_USER: "example@gmail.com"
-      EMAIL_HOST_PASSWORD: "from google apppasswords"
-      DEFAULT_FROM_EMAIL: "My Blog example@gmail.com"
-      DB_HOST: "db"
-      DB_NAME: "blog"
-      DB_USER: "postgres"
-      DB_PASSWORD: "postgres"
+      EMAIL_HOST_USER: "${EMAIL_HOST_USER}"
+      EMAIL_HOST_PASSWORD: "${EMAIL_HOST_PASSWORD}"
+      DEFAULT_FROM_EMAIL: "${DEFAULT_FROM_EMAIL}"
+      DB_HOST: "${DB_HOST}"
+      DB_NAME: "${DB_NAME}"
+      DB_USER: "${DB_USER}"
+      DB_PASSWORD: "${DB_PASSWORD}"
     volumes:
       - .:/code
   web_migrate:
@@ -32,6 +32,6 @@ services:
     volumes:
       - ./data/db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=blog
-      - POSTGRES_USER=postgres
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+      POSTGRES_DB: "${POSTGRES_DB}"
+      POSTGRES_USER: "${POSTGRES_USER}"

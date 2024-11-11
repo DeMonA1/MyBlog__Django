@@ -36,6 +36,7 @@ source my_env/bin/activate
         python manage.py dumpdata --indent=2 --output=mysite_data.json (....anage.py --help)
 
         start docker container of postgresql:
+        !! take it from .env file!!
             docker run --name=blog_db -e POSTGRES_DB=blog -e POSTGRES_USER=user -e POSTGRES_PASSWORD=****** -p 5432:5432 -d postgres
         
         and in .env file add:
