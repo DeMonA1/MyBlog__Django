@@ -1,7 +1,9 @@
 # Django_app
 
 At first, you have to create python virtual environment via:
+```
 python3 -m venv my_env
+```
 
 Next,let's activate this:
 
