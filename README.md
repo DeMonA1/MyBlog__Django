@@ -11,7 +11,7 @@ If you wanna run it without a container (in local environment),
 first of all, you should run the PostgresQL image as it'll be
 described below.
 
-### Migration db to PostgreSQL
+### :magic_wand: Migration db to PostgreSQL
 To dump data into file:
 ```
 python manage.py dumpdata --indent=2 --output=mysite_data.json (for help: mananage.py --help)
@@ -44,7 +44,7 @@ python loaddata mysite_data.json
 > from django.contrib.contenttypes.models import ContentType
 > ContentType.objects.all().delete()
 > ```
-### PostgreSQL extensions
+### :framed_picture: PostgreSQL extensions
 In order to add postgresql extension, for example, like triagram, you have to:
 ```
 python manage.py makemigrations --name=trigram_ext --empty blog
@@ -61,7 +61,7 @@ EMAIL_HOST_USER=<example@gmail.com>
 EMAIL_HOST_PASSWORD=from google apppasswords
 DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
 
-## _Basic Django commands_
+## :diamonds: _Basic Django commands_
 
 At first, you have to create python virtual environment via:
 ```
