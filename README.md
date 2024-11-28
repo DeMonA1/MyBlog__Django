@@ -1,9 +1,19 @@
-# Django_app
+# MyBlog
 
-## Main section
-Link to basic commands: [Link Text](#basic-django-commands) 
-start docker container of postgresql:
-!! take it from .env file!!
+## Main section.
+
+### Launch service. 
+To run the Blog app you should:
+```
+docker compose up
+```
+If you wanna run it without a container (in local environment),
+first of all, you should run the PostgresQL image as it'll be
+described below.
+
+Launch the PostgresQL docker container:
+[!CAUTION]
+> take it from .env file
 ```
     docker run --name=blog_db -e POSTGRES_DB=blog -e POSTGRES_USER=user -e POSTGRES_PASSWORD=****** -p 5432:5432 -d postgres
 ```
@@ -42,12 +52,6 @@ You have to create .env file with:
 EMAIL_HOST_USER=<example@gmail.com>
 EMAIL_HOST_PASSWORD=from google apppasswords
 DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
-
-To run the Blog app you should:
-    docker compose up
-
-If you wanna run it without container, first of all you should
-run the PostgresQL image as it hase described upper.
 
 ## _Basic Django commands_
 
@@ -95,3 +99,4 @@ To dump data into file:
 ```
 python manage.py dumpdata --indent=2 --output=mysite_data.json (....anage.py --help)
 ```
+Link to basic commands: [Link Text](#basic-django-commands)
