@@ -1,6 +1,6 @@
 # MyBlog
 
-## Main section.
+## :dizzy: Main section.
 
 ### Launch service. 
 To run the Blog app you should:
@@ -23,7 +23,10 @@ Launch the PostgresQL docker container:
     docker run --name=blog_db -e POSTGRES_DB=blog -e POSTGRES_USER=user -e POSTGRES_PASSWORD=****** -p 5432:5432 -d postgres
 ```
 and in .env file add:
-    DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
+- DB_NAME
+- DB_USER
+- DB_PASSWORD
+- DB_HOST
 
 After, apply migrations via:
 ```
