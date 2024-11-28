@@ -11,6 +11,7 @@ Next,let's activate this:
 source my_env/bin/activate
 ```
 <sub>(or deactivate, in depends you demands)</sub>
+
 For creation django project:
 ```
 django-admin startproject [name]
