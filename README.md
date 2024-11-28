@@ -1,5 +1,8 @@
 # Django_app
 
+## _Basic Django commands_
+<sub>For all Django project you can use it.</sub>
+
 At first, you have to create python virtual environment via:
 ```
 python3 -m venv my_env
