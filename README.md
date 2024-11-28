@@ -11,8 +11,7 @@ If you wanna run it without a container (in local environment),
 first of all, you should run the PostgresQL image as it'll be
 described below.
 
-**Migration db to PostgreSQL**
-
+### Migration db to PostgreSQL
 To dump data into file:
 ```
 python manage.py dumpdata --indent=2 --output=mysite_data.json (for help: mananage.py --help)
@@ -45,14 +44,15 @@ python loaddata mysite_data.json
 > from django.contrib.contenttypes.models import ContentType
 > ContentType.objects.all().delete()
 > ```
-
-In order to add postgresql ext for example like triagram, you have to:
-
+### PostgreSQL extensions
+In order to add postgresql extension, for example, like triagram, you have to:
+```
 python manage.py makemigrations --name=trigram_ext --empty blog
-
-Next, you edit the migrations file adding into it operations field:
+```
+Next, edit the migrations file adding into it operations field:
     TriagramExtension()
 
+### :dart: Settings
 To send share-letter not using email, use 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' into settings.
     
