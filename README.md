@@ -106,5 +106,3 @@ To create superuser:
 ```
 python3 manage.py createsuperuser
 ```
-
-Link to basic commands: [Link Text](#diamonds-basic-django-commands)
