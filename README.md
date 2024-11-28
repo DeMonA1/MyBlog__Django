@@ -54,9 +54,9 @@ Next, edit the migrations file adding into it operations field:
 
 ### :dart: Settings
 To send share-letter not using email, use 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' into settings.
+- EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' into settings.
     
-You have to create .env file with:  
+You have to create <ins>.env</ins> file with:  
 - EMAIL_HOST_USER=<example@gmail.com>
 - EMAIL_HOST_PASSWORD=from google apppasswords
 - DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
