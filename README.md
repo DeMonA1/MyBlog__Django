@@ -11,6 +11,12 @@ If you wanna run it without a container (in local environment),
 first of all, you should run the PostgresQL image as it'll be
 described below.
 
+**Migration db to PostgreSQL**
+
+To dump data into file:
+```
+python manage.py dumpdata --indent=2 --output=mysite_data.json (for help: mananage.py --help)
+```
 Launch the PostgresQL docker container:
 > [!CAUTION]
 > take it from .env file
@@ -95,8 +101,5 @@ To create superuser:
 ```
 python3 manage.py createsuperuser
 ```
-To dump data into file:
-```
-python manage.py dumpdata --indent=2 --output=mysite_data.json (....anage.py --help)
-```
+
 Link to basic commands: [Link Text](#basic-django-commands)
