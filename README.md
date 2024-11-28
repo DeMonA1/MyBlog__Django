@@ -40,12 +40,11 @@ python loaddata mysite_data.json
 > ```
 > python manage.py shell
 > ```
-
-```
-from django.contrib.contenttypes.models import ContentType
-ContentType.objects.all().delete()
-```
-
+> In the shell, run follows:
+> ```
+> from django.contrib.contenttypes.models import ContentType
+> ContentType.objects.all().delete()
+> ```
 
 In order to add postgresql ext for example like triagram, you have to:
 
