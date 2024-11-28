@@ -12,7 +12,7 @@ first of all, you should run the PostgresQL image as it'll be
 described below.
 
 Launch the PostgresQL docker container:
-[!CAUTION]
+> [!CAUTION]
 > take it from .env file
 ```
     docker run --name=blog_db -e POSTGRES_DB=blog -e POSTGRES_USER=user -e POSTGRES_PASSWORD=****** -p 5432:5432 -d postgres
