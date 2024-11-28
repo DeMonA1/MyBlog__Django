@@ -61,7 +61,7 @@ EMAIL_HOST_USER=<example@gmail.com>
 EMAIL_HOST_PASSWORD=from google apppasswords
 DEFAULT_FROM_EMAIL=My Blog <example@gmail.com>
 
-## :diamonds: _Basic Django commands_
+:diamonds: ## _Basic Django commands_
 
 At first, you have to create python virtual environment via:
 ```
