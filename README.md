@@ -26,18 +26,21 @@ Launch the PostgresQL docker container:
 and in .env file add:
     DB_NAME, DB_USER, DB_PASSWORD, DB_HOST
 
-after run this:
+After, apply migrations via:
 ```
 python manage.py migrate
 ```
 
-and after all:
+Finally, load data from json file as follows:
 ```
 python loaddata mysite_data.json
 ```
-
-If there is a problem appear such as "...DETAIL:  Key (app_label, model)=(blog, post) already exists." just run:
+> [!TIP]
+> If there is a problem appear such as "...DETAIL:  Key (app_label, model)=(blog, post) already exists." just run:
+> ```
 > python manage.py shell
+> ```
+
 ```
 from django.contrib.contenttypes.models import ContentType
 ContentType.objects.all().delete()
