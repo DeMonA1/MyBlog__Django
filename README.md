@@ -6,11 +6,11 @@ At first, you have to create python virtual environment via:
 ```
 python3 -m venv my_env
 ```
-Next,let's activate this:
+Next,let's activate this<sub>(or deactivate, in depends you demands)</sub>:
 ```
 source my_env/bin/activate
 ```
-<sub>(or deactivate, in depends you demands)</sub>
+
 
 For creation django project:
 ```
