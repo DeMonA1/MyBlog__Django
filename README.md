@@ -47,6 +47,7 @@ To dump data into file:
 python manage.py dumpdata --indent=2 --output=mysite_data.json (....anage.py --help)
 ```
 
+## Main section
 start docker container of postgresql:
 !! take it from .env file!!
 ```
